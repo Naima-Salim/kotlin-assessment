@@ -10,10 +10,9 @@ fun main(){
 
     var vegetables=Products("cabbage",45.67,60,"grocery")
     var deoderant=Products("RoyaleBlue",10.01,350,"hygiene")
-    var wood=Products("table",56.89,8900,
-        "others")
+    var wood=Products("table",56.89,8900, "others")
     var b= mutableListOf(vegetables,deoderant,wood)
-    println(vegetables)
+    println(b)
 
   var a= fruits("banana")
  println(a)
@@ -77,7 +76,18 @@ open   fun withdraw(amount:Double){
 //(3 points)
 
 data class Products(var name:String,var weight:Double,var price:Int,var category:String){
+    fun takeInProduct(name:Products){
+        var a= mutableListOf<Products>()
+        var b= mutableListOf<Products>()
+        var c= mutableListOf<Products>()
 
+        when(name.category){
+            "others"-> println(a.add(name))
+            "hygiene"-> println(b.add(name))
+            "groceries"-> println(c.add(name))
+        }
+
+    }
 
 }
 //4.Write a function that given a string returns a string composed of only
