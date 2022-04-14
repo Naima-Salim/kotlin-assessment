@@ -10,12 +10,13 @@ fun main(){
 
     var vegetables=Products("cabbage",45.67,60,"grocery")
     var deoderant=Products("RoyaleBlue",10.01,350,"hygiene")
-    var wood=Products("table",56.89,8900,"others")
+    var wood=Products("table",56.89,8900,
+        "others")
     var b= mutableListOf(vegetables,deoderant,wood)
     println(vegetables)
 
-    var f= takeInName(arrayOf("banana"))
-    println(f)
+//    var a= fruits("banana")
+//    println(a)
 }
 //Create a classCurrentAccount with the following attributes:account
 //number, account name, balance. It has the following functions:
