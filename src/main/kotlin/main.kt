@@ -15,8 +15,8 @@ fun main(){
     var b= mutableListOf(vegetables,deoderant,wood)
     println(vegetables)
 
-//    var a= fruits("banana")
-//    println(a)
+  var a= fruits("banana")
+ println(a)
 }
 //Create a classCurrentAccount with the following attributes:account
 //number, account name, balance. It has the following functions:
@@ -82,13 +82,16 @@ data class Products(var name:String,var weight:Double,var price:Int,var category
 }
 //4.Write a function that given a string returns a string composed of only
 //the characters in even indices. For example given “banana” it will return "bnn"
-    fun takeInName(names:Array<String>):List<String> {
-    var l = mutableListOf<String>()
-    names.forEachIndexed { index, s ->
-        if (s.length % 2 == 0)
-            l.add(s)
+fun fruits(name: String):String{
+    var fruit=""
+    for (n in name){
+        if (name.indexOf(n)%2==0){
+            fruit+=n
+        }
+
     }
-    return l
+    return fruit
+
 }
 
 
